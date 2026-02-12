@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>ШТИПСКИ МАРАТОН 2026</h1>
+        <h1>ШТИПСКИ МАРАТОН 2026!</h1>
 
         <div className="countdown">
           <div className="time-box"><span>{timeLeft.days}</span> дена</div>
