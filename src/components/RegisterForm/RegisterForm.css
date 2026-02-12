@@ -1,0 +1,57 @@
+.register-section {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: white;
+}
+
+.register-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1 rem;
+}
+
+.success-message {
+    color: #28a745;
+    padding: 20px;
+    border: 2px dashed #28a745;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-error {
+    border: 2px solid #ff0000 !important;
+    background-color: #fff6f6;
+}
+
+.error-text {
+    color: #ff0000;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.bounceIn {
+    animation: bounceIn 0.6s ease;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0;}
+    50% { transform: scale(1.05); opacity: 1;}
+    100% {transform: scale(1);}
+}

@@ -1,0 +1,51 @@
+import { useState, useEffect } from 'react';
+import './Hero.css';
+
+const Hero = () => {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0, secs: 0});
+
+  useEffect (() => {
+    const targetDate = new Date("May 10, 2026 09:00:00").getTime();
+
+    const interval = setInterval (() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      setTimeLeft({
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 *24)) / (1000 * 60 * 60)),
+        mins: Math.floor ((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        secs: Math.floor((distance % (1000 * 60)) / 1000)
+      });
+
+    }, 1000);
+
+    return () => clearInterval(interval);
+     
+  }, []);
+
+  const scrollToForm = () => {
+    const section = document.getElementById('registration');
+    section.scrollIntoView({behavior: 'smooth'});
+  };
+  return (
+    <section className="hero">
+      <div className="hero-content">
+        <h1>ШТИПСКИ МАРАТОН 2026</h1>
+
+        <div className="countdown">
+          <div className="time-box"><span>{timeLeft.days}</span> дена</div>
+          <div className="time-box"><span>{timeLeft.hours}</span> часа</div>
+          <div className="time-box"><span>{timeLeft.mins}</span> мин</div>
+          <div className="time-box"><span>{timeLeft.secs}</span> сек</div>
+        </div>
+        <p>Трчај кон иднината. Постави нов рекорд. Биди дел од историјата.</p>
+        <button className="hero-btn"
+                onClick={scrollToForm}>
+          Пријави се сега</button>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
