@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0, secs: 0});
+  const navigate = useNavigate();
 
   useEffect (() => {
     const targetDate = new Date("May 10, 2026 09:00:00").getTime();
@@ -24,10 +26,14 @@ const Hero = () => {
      
   }, []);
 
-  const scrollToForm = () => {
+  const goToRegister = () => {
+        navigate('/register');
+    }
+
+ /* const scrollToForm = () => {
     const section = document.getElementById('registration');
     section.scrollIntoView({behavior: 'smooth'});
-  };
+  }; */
   return (
     <section className="hero">
       <div className="hero-content">
@@ -41,7 +47,7 @@ const Hero = () => {
         </div>
         <p>Трчај кон иднината. Постави нов рекорд. Биди дел од историјата.</p>
         <button className="hero-btn"
-                onClick={scrollToForm}>
+                onClick={goToRegister}>
           Пријави се сега</button>
       </div>
     </section>

@@ -1,6 +1,7 @@
 
 import './Navbar.css'; 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +12,8 @@ const Navbar = () => {
         setIsMenuOpen(false);
         }
     }
+
+    const closeMenu = () => setIsMenuOpen(false);
     return (
         <nav className="navbar">
             
@@ -25,9 +28,9 @@ const Navbar = () => {
             </div>
              
             <ul className={isMenuOpen ? "nav-links active" : "nav-links"}>
-                <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Почетна</a></li>
-                <li><a href="#about" onClick={() => setIsMenuOpen(false)}>За трката</a></li>
-                <li><a href="#results" onClick={() => setIsMenuOpen(false)}>Резултати</a></li>
+                <li><Link to="/" className="nav-link" onClick={closeMenu}>Почетна</Link></li>
+                <li><Link to="/news" className="nav-link" onClick={closeMenu}>Вести</Link></li>
+                <li><Link to="/register" className="nav-link" onClick={closeMenu}>Регистрација</Link></li>
             </ul>
             <button className="cta-button"
                     onClick={scrollToForm}>
