@@ -1,41 +1,87 @@
+
 .register-section {
-    padding: 80px 5%;
-    text-align: center;
-    background-color: white;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
+
+.register-section h2 {
+    text-align: center;
+    color: #2d3436;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 
 .register-form {
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.register-form input {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1 rem;
-}
-
-.success-message {
-    color: #28a745;
-    padding: 20px;
-    border: 2px dashed #28a745;
-    display: inline-block;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .input-group {
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-bottom: 15px;
 }
 
+.full-width {
+    grid-column: span 2;
+}
+
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #636e72;
+    font-size: 14px;
+}
+
+
+.register-form input, 
+.register-form select {
+    padding: 12px 15px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #ff4d05;
+    box-shadow: 0 0 8px rgba(255, 77, 5, 0.2);
+}
+
+
+.hero-btn {
+    grid-column: span 2;
+    background: #ff4d05;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.2s;
+}
+
+.hero-btn:hover {
+    background: #e64404;
+    transform: translateY(-2px);
+}
+
+
 .input-error {
-    border: 2px solid #ff0000 !important;
+    border-color: #ff0000 !important;
     background-color: #fff6f6;
 }
 
@@ -46,6 +92,17 @@
     font-weight: 500;
 }
 
+
+.success-message {
+    grid-column: span 2;
+    text-align: center;
+    color: #28a745;
+    padding: 40px;
+    border: 2px dashed #28a745;
+    border-radius: 10px;
+    background: #f8fff9;
+}
+
 .bounceIn {
     animation: bounceIn 0.6s ease;
 }
@@ -54,4 +111,14 @@
     0% { transform: scale(0.3); opacity: 0;}
     50% { transform: scale(1.05); opacity: 1;}
     100% {transform: scale(1);}
+}
+
+
+@media (max-width: 600px) {
+    .register-form {
+        grid-template-columns: 1fr;
+    }
+    .full-width, .hero-btn {
+        grid-column: span 1;
+    }
 }
