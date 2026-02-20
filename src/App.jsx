@@ -11,10 +11,12 @@ import Home from './pages/Home';
 import NewsPage from './pages/NewsPage';
 import Register from './pages/Register';
 import Gallery from './components/Gallery/Gallery';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
