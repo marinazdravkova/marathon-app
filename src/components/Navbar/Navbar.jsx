@@ -6,13 +6,13 @@ import logo from "../../assets/logo.jpg";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const scrollToForm = () => {
+    /*const scrollToForm = () => {
         const section = document.getElementById('registration');
         if(section){
         section.scrollIntoView({behavior: 'smooth'});
         setIsMenuOpen(false);
         }
-    }
+    }*/
 
     const closeMenu = () => setIsMenuOpen(false);
     return (
@@ -40,11 +40,14 @@ const Navbar = () => {
                 <li><Link to="/" className="nav-link" onClick={closeMenu}>Почетна</Link></li>
                 <li><Link to="/news" className="nav-link" onClick={closeMenu}>Вести</Link></li>
                 <li><Link to="/gallery" className="nav-link" onClick={closeMenu}>Галерија</Link></li>
-                <li><Link to="/register" className="nav-link register-mobile" onClick={closeMenu}>Регистрација</Link></li>
             </ul>
-            <button className="cta-button"
-                    onClick={scrollToForm}>
-                    Регистрација</button>
+            <Link to="/register" onClick={closeMenu}>
+                <button className="cta-button"
+                    >
+                    Регистрација
+                </button>
+            </Link>
+            
            </div> 
             
             
