@@ -62,6 +62,15 @@
     font-size: 0.85rem;
     color: #777;
 }  
+.footer-image-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+    
+}
+.footer-logo {
+    margin-bottom: 10px;
+}
 
 @media (max-width: 768px) {
     .footer-content {

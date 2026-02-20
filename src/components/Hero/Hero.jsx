@@ -36,8 +36,11 @@ const Hero = () => {
   }; */
   return (
     <section className="hero">
+      <div className="hero-overlay">
       <div className="hero-content">
-        <h1>ШТИПСКИ МАРАТОН 2026!</h1>
+        <span className="hero-badge">4 Maj, 2026 • ШТИП, МАКЕДОНИЈА</span>
+
+        <h1>ШТИПСКИ МАРАТОН <span className="highlight">2026!</span></h1>
 
         <div className="countdown">
           <div className="time-box"><span>{timeLeft.days}</span> дена</div>
@@ -46,9 +49,13 @@ const Hero = () => {
           <div className="time-box"><span>{timeLeft.secs}</span> сек</div>
         </div>
         <p>Трчај кон иднината. Постави нов рекорд. Биди дел од историјата.</p>
-        <button className="hero-btn"
-                onClick={goToRegister}>
-          Пријави се сега</button>
+
+        <div className="hero-btns">
+            <button className="hero-btn" onClick={goToRegister}>Пријави се сега</button>
+            <button className="btn-outline">Дознај повеќе</button>
+        </div>
+        
+      </div>
       </div>
     </section>
   );

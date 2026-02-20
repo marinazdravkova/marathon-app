@@ -1,4 +1,44 @@
 
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.nav-logo-img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    color: #2d3436;
+}
+
+.logo-main {
+    font-size: 1.1rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 1px; 
+}
+
+.logo-sub {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -8,7 +48,11 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
     font-family: 'Inter', sans-serif;
     flex-wrap: wrap;
-    z-index: 2000;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .logo {
@@ -16,6 +60,19 @@
     font-size: 1.2 rem;
     color: #333;
     letter-spacing: 1px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #2d3436;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.nav-link:hover {
+    background-color: #ff4d05;
+    color: #ffffff !important;
 }
 
 .nav-links {
@@ -38,19 +95,20 @@
 }
 
 .cta-button {
-    background-color: #ff4500;
+    background: linear-gradient(135deg, #ff4d05 0%, #ff8c05 100%);
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 0;
-    border-radius: 8px;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 700;
     cursor: pointer;
-    font-weight: 600;
-    transition: transform 0.2s ease;
+    transition: all 0.3s ease;
+    margin-left: 20px;
 }
 
 .cta-button:hover{
     transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 77, 5, 0.4);
 }
 
 .hamburger {
@@ -88,6 +146,18 @@
         gap: 0;
         transition: 0.4s ease-in-out;
         box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+    .register-mobile {
+        color: #ff4d06 !important;
+        font-weight: 800;
+        border: 2px solid #ff4d05;
+        margin: 10px 20px;
+        text-align: center;
+        border-radius: 50px;
+    }
+    .register-mobile:hover {
+        background-color: #ff4d05;
+        color: white !important;
     }
     .nav-links.active {
         right: 0;

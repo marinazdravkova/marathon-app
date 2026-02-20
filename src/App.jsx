@@ -10,6 +10,7 @@ import News from './components/News/News';
 import Home from './pages/Home';
 import NewsPage from './pages/NewsPage';
 import Register from './pages/Register';
+import Gallery from './components/Gallery/Gallery';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/register" element={<Register />} />
       </Routes>

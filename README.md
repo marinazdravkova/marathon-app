@@ -1,16 +1,31 @@
-# React + Vite
+# 🏃‍♂️ Štip Marathon 2026 - React Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance web application built for the official Štip Marathon event. This project focuses on delivering a seamless user experience with a clean UI and responsive design.
 
-Currently, two official plugins are available:
+🚀 Features
+- Filtered Photo Gallery: Dynamic image gallery with category filtering (e.g., Marathon 2024, Preparations, Finish Line) powered by `yet-another-react-lightbox`.
+- Interactive Footer: Integrated Google Maps location, contact details, and social media connectivity.
+- Responsive UI: Fully optimized for mobile, tablet, and desktop views.
+- Modern Animations: Smooth hover effects and transitions for better engagement.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛠 Tech Stack
+- React.js (Vite)
+- CSS3 (Flexbox & Grid systems)
+- yet-another-react-lightbox - (Advanced lightbox functionality)
+- React Icons (Scalable vector icons for UI elements)
 
-## React Compiler
+📦 Installation & Local Setup
+1. Clone the repository:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+   - git clone "https://github.com/marinazdravkova/marathon-app"
 
-## Expanding the ESLint configuration
+2. Install dependencies:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    - npm install
+
+3. Run the development server:
+
+    - npm run dev
+
+🌐 Live Demo
+Check out the live version of the app here: "https://marathon-2026.netlify.app/"
